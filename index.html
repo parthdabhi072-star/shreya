@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#160a17">
+  <meta name="description" content="A magical birthday experience made especially for Shreyaa.">
+  <title>For Shreyaa ♡ — A Birthday Experience</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Great+Vibes&family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <div class="ambient-background" aria-hidden="true">
+    <div class="ambient-glow glow-a"></div>
+    <div class="ambient-glow glow-b"></div>
+    <div class="ambient-glow glow-c"></div>
+    <div class="ambient-grid"></div>
+    <div class="ambient-grain"></div>
+  </div>
+  <div class="particle-layer" id="particleLayer" aria-hidden="true"></div>
+  <div class="floating-hearts" id="floatingHearts" aria-hidden="true"></div>
+
+  <!-- Intro overlay -->
+  <div class="intro-overlay" id="introOverlay" aria-label="Birthday introduction">
+    <div class="intro-stars" aria-hidden="true">✧ · ✦ · ♡ · ✦ · ✧</div>
+    <div class="intro-orbit">
+      <span class="intro-orbit-ring ring-a"></span>
+      <span class="intro-orbit-ring ring-b"></span>
+      <span class="intro-orbit-ring ring-c"></span>
+      <span class="intro-monogram">S</span>
+    </div>
+    <p class="eyebrow">A LITTLE SOMETHING, MADE WITH CARE</p>
+    <h1 class="intro-title">For <span>Shreyaa</span></h1>
+    <p class="intro-copy">A tiny universe of wishes, memories, and magic.</p>
+    <button class="button button-gold intro-enter" id="enterExperience" type="button">
+      <span>OPEN YOUR SURPRISE</span><span aria-hidden="true">♡</span>
+    </button>
+    <p class="intro-footnote">BEST EXPERIENCED WITH THE SOUND ON — OPTIONAL</p>
+  </div>
+
+  <!-- Audio is optional. Add your own licensed/owned file to assets/music/ -->
+  <audio id="birthdayAudio" loop preload="none">
+    <source src="assets/music/birthday-song.mp3" type="audio/mpeg">
+  </audio>
+
+  <header class="site-header" id="siteHeader">
+    <a class="brand" href="#home" aria-label="Shreyaa birthday home">
+      <span class="brand-mark">S<span>♡</span></span>
+      <span class="brand-copy"><strong>SHREYAA</strong><small>HER LITTLE UNIVERSE</small></span>
+    </a>
+    <button class="menu-toggle" id="menuToggle" type="button" aria-expanded="false" aria-controls="siteNav" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+    <nav class="site-nav" id="siteNav" aria-label="Main navigation">
+      <a href="#home" class="nav-link active">Home</a>
+      <a href="#wishes" class="nav-link">Wishes</a>
+      <a href="#memories" class="nav-link">Memories</a>
+      <a href="#letter" class="nav-link">Letter</a>
+      <a href="#celebrate" class="nav-link">Celebrate</a>
+    </nav>
+    <div class="header-actions">
+      <span class="live-dot"></span><span class="header-status">MADE JUST FOR YOU</span>
+      <button class="music-toggle" id="musicToggle" type="button" aria-pressed="false" aria-label="Play or pause birthday music">
+        <span class="music-icon">♫</span><span id="musicLabel">MUSIC OFF</span>
+      </button>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- HERO -->
+    <section class="hero section-shell" id="home">
+      <div class="hero-copy reveal">
+        <p class="eyebrow"><span class="eyebrow-line"></span> TODAY IS A LITTLE MORE MAGICAL</p>
+        <h1 class="hero-title">
+          <span class="hero-title-small">HAPPY BIRTHDAY</span>
+          <span class="hero-title-name">Shreyaa<span class="title-heart">♡</span></span>
+          <span class="hero-title-script">you deserve the beautiful things</span>
+        </h1>
+        <div class="ornamental-divider"><i></i><span>✧</span><i></i></div>
+        <p class="hero-description">Today, the world gets another reason to celebrate. This little corner of the internet is filled with warm wishes, tiny details, and a reminder that your day deserves to feel special.</p>
+        <div class="hero-actions">
+          <a class="button button-gold" href="#wishes"><span>EXPLORE YOUR DAY</span><span>↗</span></a>
+          <a class="button button-glass" href="#letter"><span class="button-heart">♡</span><span>READ YOUR LETTER</span></a>
+        </div>
+        <div class="hero-footnote"><span class="tiny-star">✦</span> A ONE-OF-A-KIND DAY FOR A ONE-OF-A-KIND PERSON</div>
+      </div>
+      <div class="hero-art reveal reveal-delay-2">
+        <div class="portrait-frame">
+          <div class="frame-corner corner-tl"></div><div class="frame-corner corner-tr"></div>
+          <div class="frame-corner corner-bl"></div><div class="frame-corner corner-br"></div>
+          <div class="portrait-placeholder" id="portraitPlaceholder">
+            <div class="portrait-halo"></div>
+            <div class="portrait-flower flower-one">✿</div>
+            <div class="portrait-flower flower-two">✾</div>
+            <div class="portrait-flower flower-three">✿</div>
+            <div class="portrait-monogram">S</div>
+            <p>YOUR FAVORITE PHOTO GOES HERE</p>
+            <small>assets/images/shreyaa.jpg</small>
+          </div>
+          <div class="portrait-caption"><span>THE BIRTHDAY GIRL</span><span>♡</span></div>
+        </div>
+        <div class="floating-note note-top"><span>✧</span><div><small>A WISH FOR YOU</small><strong>Endless happiness</strong></div></div>
+        <div class="floating-note note-bottom"><span>♡</span><div><small>YOUR SPECIAL DAY</small><strong>Make it unforgettable</strong></div></div>
+        <div class="orbit-decoration orbit-decoration-one"></div>
+        <div class="orbit-decoration orbit-decoration-two"></div>
+      </div>
+      <a class="scroll-cue" href="#wishes"><span>SCROLL TO FEEL THE MAGIC</span><b>↓</b></a>
+    </section>
+
+    <!-- MOVING RIBBON -->
+    <div class="ribbon" aria-label="Birthday wishes">
+      <div class="ribbon-track">
+        <div class="ribbon-group"><span>HAPPY BIRTHDAY</span><b>✦</b><span>STAY GOLDEN</span><b>♡</b><span>KEEP SHINING</span><b>✧</b><span>MAKE A WISH</span><b>♡</b></div>
+        <div class="ribbon-group" aria-hidden="true"><span>HAPPY BIRTHDAY</span><b>✦</b><span>STAY GOLDEN</span><b>♡</b><span>KEEP SHINING</span><b>✧</b><span>MAKE A WISH</span><b>♡</b></div>
+      </div>
+    </div>
+
+    <!-- WISHES -->
+    <section class="wishes-section section-shell section-pad" id="wishes">
+      <div class="section-heading reveal">
+        <p class="eyebrow">CHAPTER ONE · LITTLE WISHES</p>
+        <h2>A day full of <em>beautiful things.</em></h2>
+        <p>May the year ahead be gentle when you need peace, exciting when you need adventure, and full of reasons to smile.</p>
+      </div>
+      <div class="wish-grid">
+        <article class="wish-card reveal"><div class="wish-card-number">01</div><div class="wish-icon">✧</div><h3>More reasons to smile</h3><p>May ordinary days surprise you with extraordinary little moments.</p><span class="wish-card-footer">A LITTLE JOY, EVERY DAY</span></article>
+        <article class="wish-card wish-card-featured reveal reveal-delay-1"><div class="wish-card-number">02</div><div class="wish-icon">♡</div><h3>Love that feels like home</h3><p>May you always feel valued, supported, understood, and surrounded by people who wish you well.</p><span class="wish-card-footer">YOU DESERVE KINDNESS</span></article>
+        <article class="wish-card reveal reveal-delay-2"><div class="wish-card-number">03</div><div class="wish-icon">✦</div><h3>Dreams taking flight</h3><p>May courage meet opportunity, and may your next chapter surprise you in the best way.</p><span class="wish-card-footer">KEEP BECOMING YOU</span></article>
+      </div>
+      <div class="wish-quote reveal"><span class="quote-mark">“</span><p>May you never forget how much beauty you bring to the little moments around you.</p><span class="quote-attribution">A BIRTHDAY WISH, JUST FOR YOU</span></div>
+    </section>
+
+    <!-- COUNTDOWN / BIRTHDAY CLOCK -->
+    <section class="birthday-moment section-pad" id="moment">
+      <div class="moment-inner reveal">
+        <div class="moment-decoration">✧ &nbsp; ♡ &nbsp; ✧</div>
+        <p class="eyebrow">PAUSE HERE FOR A SECOND</p>
+        <h2>This moment is <em>yours.</em></h2>
+        <p class="moment-copy">Take a breath, make a little wish, and let yourself enjoy today.</p>
+        <div class="moment-clock" aria-label="Current time">
+          <div class="clock-unit"><strong id="clockHours">00</strong><span>HOURS</span></div><i>:</i>
+          <div class="clock-unit"><strong id="clockMinutes">00</strong><span>MINUTES</span></div><i>:</i>
+          <div class="clock-unit"><strong id="clockSeconds">00</strong><span>SECONDS</span></div>
+        </div>
+        <p class="clock-caption">A LIVE LITTLE REMINDER TO ENJOY THE PRESENT</p>
+      </div>
+    </section>
+
+    <!-- MEMORIES -->
+    <section class="memories-section section-shell section-pad" id="memories">
+      <div class="section-heading reveal">
+        <p class="eyebrow">CHAPTER TWO · MOMENTS TO KEEP</p>
+        <h2>Little moments, <em>lasting memories.</em></h2>
+        <p>Add your favorite photos in the gallery. Each frame is a place for a moment worth remembering.</p>
+      </div>
+      <div class="memory-gallery">
+        <figure class="memory-card memory-card-tall reveal">
+          <div class="memory-image memory-image-one"><span class="memory-placeholder-mark">01</span><span class="memory-placeholder-text">ADD A FAVORITE PHOTO</span><span class="memory-image-heart">♡</span></div>
+          <figcaption><span>THE KIND OF MOMENT THAT STAYS</span><b>01</b></figcaption>
+        </figure>
+        <figure class="memory-card reveal reveal-delay-1">
+          <div class="memory-image memory-image-two"><span class="memory-placeholder-mark">02</span><span class="memory-placeholder-text">A HAPPY MEMORY</span><span class="memory-image-heart">♡</span></div>
+          <figcaption><span>SMALL THINGS, BIG FEELINGS</span><b>02</b></figcaption>
+        </figure>
+        <figure class="memory-card reveal reveal-delay-2">
+          <div class="memory-image memory-image-three"><span class="memory-placeholder-mark">03</span><span class="memory-placeholder-text">A MOMENT TO KEEP</span><span class="memory-image-heart">♡</span></div>
+          <figcaption><span>COLLECTING LITTLE JOYS</span><b>03</b></figcaption>
+        </figure>
+        <figure class="memory-card memory-card-wide reveal">
+          <div class="memory-image memory-image-four"><span class="memory-placeholder-mark">04</span><span class="memory-placeholder-text">YOUR BEAUTIFUL STORY CONTINUES</span><span class="memory-image-heart">♡</span></div>
+          <figcaption><span>THE NEXT CHAPTER STARTS NOW</span><b>04</b></figcaption>
+        </figure>
+      </div>
+      <p class="gallery-note"><span>✧</span> Replace the placeholders with your own photos to make this page personal. <span>✧</span></p>
+    </section>
+
+    <!-- LETTER -->
+    <section class="letter-section section-pad" id="letter">
+      <div class="letter-background-mark" aria-hidden="true">♡</div>
+      <div class="letter-layout section-shell">
+        <div class="letter-side reveal">
+          <p class="eyebrow">CHAPTER THREE · WORDS FROM THE HEART</p>
+          <h2>A little letter, <em>for you.</em></h2>
+          <p>Some things are easier to say when they are written down. So here is a small note to make your birthday feel a little more special.</p>
+          <div class="letter-side-flourish">With warmth, always <span>♡</span></div>
+        </div>
+        <article class="letter-paper reveal reveal-delay-1">
+          <div class="paper-top"><span>TO SHREYAA</span><span>WITH LOVE & LIGHT</span></div>
+          <div class="paper-flower" aria-hidden="true">❀</div>
+          <h3>Dear Shreyaa,</h3>
+          <p>Happy Birthday! ♡</p>
+          <p>I hope this new chapter brings you the kind of happiness that stays, the kind of laughter that makes your cheeks hurt, and the kind of memories you look back on with a smile.</p>
+          <p>Keep being curious, keep chasing the things that make your heart feel alive, and remember to be proud of how far you have come. You do not have to have everything figured out to make this year meaningful.</p>
+          <p>May there be beautiful surprises around the corner, good people beside you, and plenty of little reasons to celebrate yourself.</p>
+          <p class="letter-signoff">Wishing you the loveliest birthday,</p>
+          <p class="letter-signature">With care ♡</p>
+          <p class="letter-signature">Parth ♡</p>
+          <div class="paper-bottom"><span>MADE ESPECIALLY FOR YOU</span><span>✧  ♥  ✧</span></div>
+        </article>
+      </div>
+    </section>
+
+    <!-- CELEBRATION -->
+    <section class="celebration-section section-shell section-pad" id="celebrate">
+      <div class="section-heading reveal">
+        <p class="eyebrow">CHAPTER FOUR · LET THE MAGIC BEGIN</p>
+        <h2>Make a wish. <em>Keep the magic.</em></h2>
+        <p>There is no perfect way to celebrate. Sometimes a tiny wish is enough to make a day feel special.</p>
+      </div>
+      <div class="celebration-card reveal">
+        <div class="celebration-glow"></div>
+        <div class="cake-scene" aria-label="Illustrated birthday cake">
+          <div class="cake-sparkle sparkle-a">✦</div><div class="cake-sparkle sparkle-b">✧</div><div class="cake-sparkle sparkle-c">✦</div>
+          <div class="candle"><span class="flame" id="candleFlame"></span></div>
+          <div class="cake-top"></div>
+          <div class="cake-layer cake-layer-top"><span class="icing-drip drip-a"></span><span class="icing-drip drip-b"></span><span class="icing-drip drip-c"></span></div>
+          <div class="cake-layer cake-layer-bottom"><span class="cake-decoration">♡</span><span class="cake-decoration">✧</span><span class="cake-decoration">♡</span></div>
+          <div class="cake-plate"></div>
+        </div>
+        <p class="cake-kicker">A LITTLE BIRTHDAY TRADITION</p>
+        <h3>Close your eyes. Make a wish.</h3>
+        <p class="cake-description">When you're ready, tap the button and let the little celebration begin.</p>
+        <button class="button button-gold wish-button" id="makeWishButton" type="button"><span>MAKE A WISH</span><span>✧</span></button>
+        <p class="wish-result" id="wishResult" aria-live="polite"></p>
+      </div>
+    </section>
+
+    <!-- SURPRISE REVEAL -->
+    <section class="surprise-section section-pad" id="surprise">
+      <div class="surprise-content reveal">
+        <div class="surprise-seal">S<span>♡</span></div>
+        <p class="eyebrow">ONE LAST LITTLE THING</p>
+        <h2>There is always room for <em>one more smile.</em></h2>
+        <p>Ready for your final birthday message?</p>
+        <button class="button button-gold" id="revealSurprise" type="button"><span>REVEAL YOUR MESSAGE</span><span>↗</span></button>
+        <div class="surprise-message" id="surpriseMessage" hidden>
+          <div class="surprise-message-ornament">✧ ♡ ✧</div>
+          <h3>Keep shining, Shreyaa.</h3>
+          <p>May the next 365 days hold fresh beginnings, kind people, brave dreams, and memories that make you smile long after the moment has passed. Happy Birthday! ♡</p>
+          <div class="surprise-message-signature">THIS LITTLE WORLD WAS MADE FOR YOU</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="site-footer">
+      <div class="footer-top">
+        <a class="footer-brand" href="#home">S<span>♡</span></a>
+        <p>For Shreyaa, on her special day.</p>
+        <a class="back-to-top" href="#home">BACK TO THE TOP ↑</a>
+      </div>
+      <div class="footer-divider"></div>
+      <div class="footer-bottom">
+        <span>MADE WITH CARE & A LITTLE BIT OF MAGIC</span>
+        <span>HAPPY BIRTHDAY, SHREYAA ♡</span>
+        <span>✧ · ♡ · ✧</span>
+      </div>
+    </footer>
+  </main>
+
+  <div class="toast-message" id="toastMessage" role="status" aria-live="polite"></div>
+  <button class="back-to-top-floating" id="backToTop" type="button" aria-label="Back to top">↑</button>
+  <script src="script.js"></script>
+</body>
+</html>
